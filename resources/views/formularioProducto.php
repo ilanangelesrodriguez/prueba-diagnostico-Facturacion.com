@@ -72,7 +72,7 @@
                 <label for="descripcion" class="block text-sm font-medium text-gray-700 mb-1">Descripción</label>
                 <textarea id="descripcion" name="descripcion" rows="3" class="w-full p-2 border rounded">Elegante set de comedor de madera natural, incluye mesa y sillas. Diseño clásico y duradero, ideal para cualquier estilo de decoración. Perfecto para cenas familiares y reuniones sociales.</textarea>
             </div>
-            <button type="submit" class="w-full bg-emerald-500 text-white py-2 px-4 rounded hover:bg-emerald-600">Guardar Producto</button>
+            <button type="submit" class="w-full bg-cyan-500 py-4 px-4 rounded hover:bg-cyan-600">Guardar Producto</button>
         </form>
     </div>
 </body>
