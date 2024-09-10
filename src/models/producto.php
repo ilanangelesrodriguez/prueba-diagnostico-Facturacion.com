@@ -1,23 +1,22 @@
 <?php
-
 class Producto {
     public $codigo;
     public $nombre;
-    public $bodega;
-    public $sucursal;
-    public $moneda;
     public $precio;
-    public $materiales;
     public $descripcion;
+    public $id_bodega;
+    public $id_sucursal;
+    public $id_moneda;
+    public $materiales;
 
-    public function __construct($codigo, $nombre, $bodega, $sucursal, $moneda, $precio, $materiales, $descripcion) {
+    public function __construct($codigo, $nombre, $precio, $descripcion, $id_bodega, $id_sucursal, $id_moneda, $materiales) {
         $this->codigo = $codigo;
         $this->nombre = $nombre;
-        $this->bodega = $bodega;
-        $this->sucursal = $sucursal;
-        $this->moneda = $moneda;
         $this->precio = $precio;
-        $this->materiales = $materiales;
         $this->descripcion = $descripcion;
+        $this->id_bodega = $id_bodega;
+        $this->id_sucursal = $id_sucursal;
+        $this->id_moneda = $id_moneda;
+        $this->materiales = $materiales;
     }
 }
