@@ -1,4 +1,4 @@
 <?php
 
-$name = getenv('NAME', true) ?: 'World';
-echo sprintf('Hola %s!', $name);
+header('Location: resources/views/formularioProducto.php');
+exit();

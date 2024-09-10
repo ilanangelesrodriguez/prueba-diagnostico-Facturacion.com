@@ -1,0 +1,58 @@
+# Archivos de entorno
+.env
+.env.local
+.env.*.local
+
+# Directorios de dependencias
+/vendor/
+node_modules/
+
+# Archivos de configuración del IDE
+/.idea/
+/.vscode/
+/*.code-workspace
+
+# Archivos de caché y logs
+/logs/
+/tmp/
+/cache/
+/*.log
+
+# Archivos de configuración del sistema operativo
+.DS_Store
+Thumbs.db
+
+# Archivos de configuración de Composer
+composer.lock
+
+# Archivos de configuración de PHPUnit
+.phpunit.result.cache
+
+# Archivos de configuración de PHPStorm
+/.phpstorm.meta.php
+
+# Archivos de configuración de Symfony
+/.env.local.php
+/.env.*.local.php
+
+# Archivos de configuración de Laravel
+/storage/
+Homestead.yaml
+Homestead.json
+/.vagrant/
+
+# Archivos de configuración de herramientas de construcción
+/build/
+/dist/
+
+# Archivos de configuración de Docker
+docker-compose.override.yml
+
+# Archivos de configuración de PHPUnit
+/.phpunit.result.cache
+
+# Archivos de configuración de cobertura de código
+/coverage/
+
+# Archivos de configuración de herramientas de análisis estático
+/.php_cs.cache
