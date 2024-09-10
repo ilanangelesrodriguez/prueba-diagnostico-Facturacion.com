@@ -23,6 +23,8 @@
             <button type="submit" class="bg-teal-500 text-white px-4 py-2">Guardar Producto</button>
         </form>
     </div>
+
+    
 </body>
 <script src="resources/js/script.js"></script>
 </html>

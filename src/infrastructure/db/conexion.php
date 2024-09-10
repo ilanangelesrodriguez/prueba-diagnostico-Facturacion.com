@@ -12,7 +12,7 @@ class Conexion {
                 self::$conexion = new PDO($dsn, $username, $password);
                 self::$conexion->setAttribute(PDO::ATTR_ERRMODE, PDO::ERRMODE_EXCEPTION);
 
-                self::ejecutarScriptSQL('./script.sql');
+                self::ejecutarScriptSQL(__DIR__ . '/script.sql');
             } catch (PDOException $e) {
                 throw new Exception("Error al conectar a la base de datos: " . $e->getMessage());
             }
