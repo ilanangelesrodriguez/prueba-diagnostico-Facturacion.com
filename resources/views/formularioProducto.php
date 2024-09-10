@@ -7,11 +7,11 @@
     <title>Registro de Productos</title>
     <link href="../css/output.css" rel="stylesheet">
 </head>
-<body class="bg-gray-100">
-    <div class="max-w-2xl mx-auto bg-white p-8 rounded-lg shadow-md">
+<body class="bg-gray-100 h-100 mt-2">
+    <div class="max-w-2xl mx-auto bg-white p-8 rounded-lg shadow-xl">
         <h1 class="text-2xl font-bold mb-6">Formulario de Producto</h1>
         <form id="formProducto" method="POST" action="../../src/controllers/productoController.php">
-            <div class="grid grid-cols-2 gap-4 mb-4">
+            <div class="grid grid-cols-2 gap-2 mb-3">
                 <div>
                     <label for="codigo" class="block text-sm font-medium text-gray-700 mb-1">Código</label>
                     <input type="text" id="codigo" name="codigo" value="PROD01K" class="w-full p-2 border rounded">
