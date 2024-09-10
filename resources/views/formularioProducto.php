@@ -45,7 +45,7 @@
             </div>
             <div class="mb-4">
                 <label class="block text-sm font-medium text-gray-700 mb-1">Material del Producto</label>
-                <div class="grid grid-cols-2 md:grid-cols-3 gap-2"></div></div>
+                <div class="grid grid-cols-2 md:grid-cols-3 gap-2">
                     <label class="inline-flex items-center">
                         <input type="checkbox" class="form-checkbox" name="materiales[]" value="plastico">
                         <span class="ml-2">Plástico</span>
@@ -72,7 +72,7 @@
                 <label for="descripcion" class="block text-sm font-medium text-gray-700 mb-1">Descripción</label>
                 <textarea id="descripcion" name="descripcion" rows="3" class="w-full p-2 border rounded">Elegante set de comedor de madera natural, incluye mesa y sillas. Diseño clásico y duradero, ideal para cualquier estilo de decoración. Perfecto para cenas familiares y reuniones sociales.</textarea>
             </div>
-            <button type="submit" class="w-full bg-cyan-500 py-4 px-4 rounded hover:bg-cyan-600 focus:outline-none focus:ring-2 focus:ring-cyan-600 focus:ring-opacity-50">Guardar Producto</button>
+            <button type="submit" class="w-full bg-cyan-500 py-2 px-4 rounded hover:bg-cyan-600 focus:outline-none focus:ring-2 focus:ring-cyan-600 focus:ring-opacity-50">Guardar Producto</button>
         </form>
     </div>
 </body>
