@@ -7,11 +7,11 @@
     <title>Registro de Productos</title>
     <link href="../css/output.css" rel="stylesheet">
 </head>
-<body class="bg-gray-100 h-100 mt-2">
-    <div class="max-w-2xl mx-auto bg-white p-8 rounded-lg shadow-xl">
-        <h1 class="text-2xl font-bold mb-6">Formulario de Producto</h1>
+<body class="bg-gray-100 h-full flex items-center justify-center">
+    <div class="max-w-2xl w-full mx-auto bg-white p-8 rounded-lg shadow-xl">
+        <h1 class="text-2xl font-bold mb-6 text-center">Formulario de Producto</h1>
         <form id="formProducto" method="POST" action="../../src/controllers/productoController.php">
-            <div class="grid grid-cols-2 gap-2 mb-3">
+            <div class="grid grid-cols-1 md:grid-cols-2 gap-4 mb-4">
                 <div>
                     <label for="codigo" class="block text-sm font-medium text-gray-700 mb-1">Código</label>
                     <input type="text" id="codigo" name="codigo" value="PROD01K" class="w-full p-2 border rounded">
@@ -45,7 +45,7 @@
             </div>
             <div class="mb-4">
                 <label class="block text-sm font-medium text-gray-700 mb-1">Material del Producto</label>
-                <div class="flex space-x-4">
+                <div class="grid grid-cols-2 md:grid-cols-3 gap-2"></div></div>
                     <label class="inline-flex items-center">
                         <input type="checkbox" class="form-checkbox" name="materiales[]" value="plastico">
                         <span class="ml-2">Plástico</span>
@@ -72,7 +72,7 @@
                 <label for="descripcion" class="block text-sm font-medium text-gray-700 mb-1">Descripción</label>
                 <textarea id="descripcion" name="descripcion" rows="3" class="w-full p-2 border rounded">Elegante set de comedor de madera natural, incluye mesa y sillas. Diseño clásico y duradero, ideal para cualquier estilo de decoración. Perfecto para cenas familiares y reuniones sociales.</textarea>
             </div>
-            <button type="submit" class="w-full bg-cyan-500 py-4 px-4 rounded hover:bg-cyan-600">Guardar Producto</button>
+            <button type="submit" class="w-full bg-cyan-500 py-4 px-4 rounded hover:bg-cyan-600 focus:outline-none focus:ring-2 focus:ring-cyan-600 focus:ring-opacity-50">Guardar Producto</button>
         </form>
     </div>
 </body>
