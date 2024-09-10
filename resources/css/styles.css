@@ -2,122 +2,102 @@
 
 body {
     font-family: 'Roboto', sans-serif;
+    background-color: #f0f0f0;
     margin: 0;
-    padding: 0;
-    background-color: #f4f4f4;
-    color: #333;
-}
-
-h1, h2, h3, h4, h5, h6 {
-    font-weight: 700;
-    margin: 0 0 15px 0;
-}
-
-p {
-    margin: 0 0 15px 0;
-    line-height: 1.6;
-}
-
-a {
-    color: #3498db;
-    text-decoration: none;
-}
-
-a:hover {
-    text-decoration: underline;
-}
-
-body {
-    background-color: #f7fafc; /* bg-gray-100 */
-    height: 100vh; /* h-screen */
-    display: flex; /* flex */
-    align-items: center; /* items-center */
-    justify-content: center; /* justify-center */
+    padding: 2em;
+    display: flex;
+    justify-content: center;
+    align-items: center;
 }
 
 .container {
-    max-width: 32rem; /* max-w-2xl */
-    width: 100%; /* w-full */
-    margin: 0 auto; /* mx-auto */
-    background-color: #ffffff; /* bg-white */
-    padding: 1rem; /* p-4 */
-    border-radius: 0.5rem; /* rounded-lg */
-    box-shadow: 0 10px 15px -3px rgba(0, 0, 0, 0.1), 0 4px 6px -2px rgba(0, 0, 0, 0.05); /* shadow-xl */
+    background-color: white;
+    padding: 2em;
+    border-radius: 5px;
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+    width: 100%;
+    max-width: 600px;
 }
 
 h1 {
-    font-size: 1.5rem; /* text-2xl */
-    font-weight: bold; /* font-bold */
-    margin-bottom: 1.5rem; /* mb-6 */
-    text-align: center; /* text-center */
+    text-align: center;
+    margin-bottom: 20px;
+    color: #333;
 }
 
-form {
-    display: grid; /* grid */
-    grid-template-columns: 1fr; /* grid-cols-1 */
-    gap: 0.5rem; /* gap-2 */
-    margin-bottom: 1rem; /* mb-4 */
+.form-row {
+    display: flex;
+    gap: 20px;
+    margin-bottom: 15px;
 }
 
-@media (min-width: 768px) {
-    form {
-        grid-template-columns: repeat(2, 1fr); /* md:grid-cols-2 */
-    }
+.form-group {
+    flex: 1;
+}
+
+.full-width {
+    width: 100%;
 }
 
 label {
     display: block;
-    font-size: 0.875rem; /* text-sm */
-    font-weight: 500; /* font-medium */
-    color: #4a5568; /* text-gray-700 */
-    margin-bottom: 0.25rem; /* mb-1 */
+    margin-bottom: 5px;
+    font-weight: bold;
+    color: #555;
 }
 
-input[type="text"], select, textarea {
-    width: 100%; /* w-full */
-    padding: 0.5rem; /* p-2 */
-    border: 1px solid #e2e8f0; /* border */
-    border-radius: 0.25rem; /* rounded */
+input[type="text"],
+select,
+textarea {
+    font-family: 'Roboto', sans-serif;
+    width: 98%;
+    padding-top: 8px;
+    padding-bottom: 8px;
+    border: 1px solid #ccc;
+    border-radius: 4px;
+    font-size: 14px;
 }
 
 .checkbox-group {
-    display: grid; /* grid */
-    grid-template-columns: repeat(2, 1fr); /* grid-cols-2 */
-    gap: 0.5rem; /* gap-2 */
-    margin-bottom: 1rem; /* mb-4 */
-}
-
-@media (min-width: 768px) {
-    .checkbox-group {
-        grid-template-columns: repeat(3, 1fr); /* md:grid-cols-3 */
-    }
+    display: flex;
+    flex-wrap: wrap;
+    gap: 10px;
 }
 
 .checkbox-label {
-    display: inline-flex; /* inline-flex */
-    align-items: center; /* items-center */
+    display: flex;
+    align-items: center;
+    cursor: pointer;
 }
 
 .checkbox-label input[type="checkbox"] {
-    margin-right: 0.5rem; /* ml-2 */
+    margin-right: 5px;
+}
+
+textarea {
+    font-family: 'Roboto', sans-serif;
+    resize: vertical;
 }
 
 button {
-    width: 100%; /* w-full */
-    background-color: #06b6d4; /* bg-cyan-500 */
-    padding: 0.5rem 1rem; /* py-2 px-4 */
-    border-radius: 0.25rem; /* rounded */
+    width: 100%;
+    padding: 10px;
+    background-color: #00c853;
+    color: white;
     border: none;
-    color: #ffffff;
+    border-radius: 4px;
+    font-size: 16px;
     cursor: pointer;
-    transition: background-color 0.3s;
+    transition: background-color 0.3s ease;
 }
 
 button:hover {
-    background-color: #0891b2; /* hover:bg-cyan-600 */
+    background-color: #00a844;
 }
 
-button:focus {
-    outline: none; /* focus:outline-none */
-    box-shadow: 0 0 0 2px rgba(6, 182, 212, 0.5); /* focus:ring-2 focus:ring-cyan-600 focus:ring-opacity-50 */
+@media (max-width: 600px) {
+    .form-row {
+        flex-direction: column;
+        gap: 15px;
+    }
 }
