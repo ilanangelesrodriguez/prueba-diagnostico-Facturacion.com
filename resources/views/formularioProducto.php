@@ -3,15 +3,15 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link href="assets/css/estilos.css" rel="stylesheet">
+    <link href="../css/styles.css" rel="stylesheet">
     <title>Registro de Productos</title>
     <link href="../css/output.css" rel="stylesheet">
 </head>
-<body class="bg-gray-100 h-full flex items-center justify-center">
-    <div class="max-w-2xl w-full mx-auto bg-white p-8 rounded-lg shadow-xl">
+<body class="bg-gray-100 h-screen flex items-center justify-center">
+    <div class="max-w-2xl w-full mx-auto bg-white p-4 rounded-lg shadow-xl">
         <h1 class="text-2xl font-bold mb-6 text-center">Formulario de Producto</h1>
         <form id="formProducto" method="POST" action="../../src/controllers/productoController.php">
-            <div class="grid grid-cols-1 md:grid-cols-2 gap-4 mb-4">
+            <div class="grid grid-cols-1 md:grid-cols-2 gap-2 mb-4">
                 <div>
                     <label for="codigo" class="block text-sm font-medium text-gray-700 mb-1">Código</label>
                     <input type="text" id="codigo" name="codigo" value="PROD01K" class="w-full p-2 border rounded">
