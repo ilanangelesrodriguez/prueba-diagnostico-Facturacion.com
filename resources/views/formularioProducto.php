@@ -102,6 +102,22 @@
                     `;
                     materialesDiv.appendChild(label);
                 });
+
+                // Filtrar sucursales según la bodega seleccionada
+                bodegaSelect.addEventListener('change', function() {
+                    const selectedBodegaId = parseInt(bodegaSelect.value);
+                    sucursalSelect.innerHTML = ''; // Limpiar opciones actuales
+
+                    const filteredSucursales = data.sucursales.filter(sucursal => sucursal.id_bodega === selectedBodegaId);
+                    filteredSucursales.forEach(sucursal => {
+                        const option = document.createElement('option');
+                        option.value = sucursal.id;
+                        option.textContent = sucursal.nombre_sucursal;
+                        sucursalSelect.appendChild(option);
+                    });
+                });
+
+                bodegaSelect.dispatchEvent(new Event('change'));
             })
             .catch(error => console.error('Error:', error));
     });
