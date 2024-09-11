@@ -1,3 +1,4 @@
+-- Crear tablas
 CREATE TABLE IF NOT EXISTS productos (
     id SERIAL PRIMARY KEY,
     codigo_producto VARCHAR(15) UNIQUE NOT NULL,
@@ -36,3 +37,23 @@ CREATE TABLE IF NOT EXISTS producto_materiales (
     id_material INT REFERENCES materiales(id),
     PRIMARY KEY (id_producto, id_material)
 );
+
+-- Insertar datos iniciales solo si las tablas están vacías
+DO $$
+BEGIN
+    IF NOT EXISTS (SELECT 1 FROM bodegas) THEN
+        INSERT INTO bodegas (nombre_bodega) VALUES ('Bodega Central'), ('Bodega Norte');
+    END IF;
+
+    IF NOT EXISTS (SELECT 1 FROM sucursales) THEN
+        INSERT INTO sucursales (nombre_sucursal, id_bodega) VALUES ('Sucursal 1', 1), ('Sucursal 2', 1), ('Sucursal 3', 2);
+    END IF;
+
+    IF NOT EXISTS (SELECT 1 FROM monedas) THEN
+        INSERT INTO monedas (nombre_moneda, simbolo_moneda) VALUES ('Dólar', '$'), ('Soles', 'S/.');
+    END IF;
+
+    IF NOT EXISTS (SELECT 1 FROM materiales) THEN
+        INSERT INTO materiales (nombre_material) VALUES ('Plástico'), ('Metal'), ('Madera');
+    END IF;
+END $$;
