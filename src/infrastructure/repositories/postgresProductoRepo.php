@@ -1,4 +1,8 @@
 <?php
+
+require_once __DIR__ . '/../db/conexion.php';
+require_once '../models/repositorioProducto.php';
+
 class PostgresProductoRepo implements RepositorioProducto {
     public function guardar(Producto $producto) {
         $conexion = Conexion::conectar();

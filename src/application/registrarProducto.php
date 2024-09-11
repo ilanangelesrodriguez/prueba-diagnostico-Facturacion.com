@@ -13,5 +13,6 @@ class RegistrarProducto {
         }
 
         $this->repositorio->guardar($producto);
+
     }
 }

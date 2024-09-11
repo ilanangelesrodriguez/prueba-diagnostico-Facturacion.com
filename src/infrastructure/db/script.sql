@@ -50,7 +50,7 @@ BEGIN
     END IF;
 
     IF NOT EXISTS (SELECT 1 FROM monedas) THEN
-        INSERT INTO monedas (nombre_moneda, simbolo_moneda) VALUES ('Dólar', '$'), ('Soles', 'S/.');
+        INSERT INTO monedas (nombre_moneda, simbolo_moneda) VALUES ('Peso chileno', '$'), ('Soles', 'S/.');
     END IF;
 
     IF NOT EXISTS (SELECT 1 FROM materiales) THEN

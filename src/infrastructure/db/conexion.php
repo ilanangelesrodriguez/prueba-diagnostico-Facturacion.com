@@ -1,5 +1,7 @@
 <?php
 
+require_once __DIR__ . '/../repositories/postgresProductoRepo.php';
+
 class Conexion {
     private static $conexion = null;
 
