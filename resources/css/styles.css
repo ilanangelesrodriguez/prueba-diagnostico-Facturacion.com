@@ -1,7 +1,7 @@
 @import url('https://fonts.googleapis.com/css2?family=Roboto:wght@400;700&display=swap');
 
 body {
-    font-family: 'Roboto', sans-serif;
+    font-family: Arial, sans-serif;
     background-color: #f0f0f0;
     margin: 0;
     padding: 2em;
@@ -49,13 +49,13 @@ label {
 input[type="text"],
 select,
 textarea {
-    font-family: 'Roboto', sans-serif;
+    font-family: Arial, sans-serif;
     width: 98%;
     padding-top: 8px;
     padding-bottom: 8px;
     border: 1px solid #ccc;
     border-radius: 4px;
-    font-size: 14px;
+    font-size: 16px;
 }
 
 .checkbox-group {
@@ -75,7 +75,7 @@ textarea {
 }
 
 textarea {
-    font-family: 'Roboto', sans-serif;
+    font-family: Arial, sans-serif;
     resize: vertical;
 }
 
