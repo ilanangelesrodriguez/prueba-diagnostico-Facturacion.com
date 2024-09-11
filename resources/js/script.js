@@ -1,12 +1,15 @@
 document.addEventListener('DOMContentLoaded', function() {
+    // Cargar datos del formulario desde el servidor
     fetch('../../src/controllers/cargarDatosFormulario.php')
         .then(response => response.json())
         .then(data => {
+            // Obtener referencias a los elementos del formulario
             const bodegaSelect = document.getElementById('bodega');
             const sucursalSelect = document.getElementById('sucursal');
             const monedaSelect = document.getElementById('moneda');
             const materialesDiv = document.querySelector('.checkbox-group');
 
+            // Llenar el campo de bodegas
             data.bodegas.forEach(bodega => {
                 const option = document.createElement('option');
                 option.value = bodega.id;
@@ -14,6 +17,7 @@ document.addEventListener('DOMContentLoaded', function() {
                 bodegaSelect.appendChild(option);
             });
 
+            // Llenar el campo de sucursales
             data.sucursales.forEach(sucursal => {
                 const option = document.createElement('option');
                 option.value = sucursal.id;
@@ -21,6 +25,7 @@ document.addEventListener('DOMContentLoaded', function() {
                 sucursalSelect.appendChild(option);
             });
 
+            // Llenar el campo de monedas
             data.monedas.forEach(moneda => {
                 const option = document.createElement('option');
                 option.value = moneda.id;
@@ -28,6 +33,7 @@ document.addEventListener('DOMContentLoaded', function() {
                 monedaSelect.appendChild(option);
             });
 
+            // Llenar el campo de materiales
             data.materiales.forEach(material => {
                 const label = document.createElement('label');
                 label.classList.add('checkbox-label');
