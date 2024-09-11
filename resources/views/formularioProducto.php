@@ -227,7 +227,6 @@
                     
                     if (data.success) {
                         alert('Producto guardado exitosamente');
-                        this.reset(); // Limpiar los campos del formulario
                     } else {
                         alert('Error al guardar el producto: ' + data.message);
                     }
