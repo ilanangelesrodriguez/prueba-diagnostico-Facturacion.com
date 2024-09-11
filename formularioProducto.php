@@ -9,7 +9,7 @@
 <body>
 <div class="container">
     <h1>Formulario de Producto</h1>
-    <form id="formProducto" method="POST" action="../../src/controllers/productoController.php">
+    <form id="formProducto" method="POST" action="./src/controllers/productoController.php">
         <div class="form-row">
             <div class="form-group">
                 <label for="codigo">Código</label>
@@ -64,7 +64,7 @@
         </div>
     </form>
 </div>
-<script src="../js/script.js"></script>
+<script src="./resources/js/script.js"></script>
 
 </body>
 </html>

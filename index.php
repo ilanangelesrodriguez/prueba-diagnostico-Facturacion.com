@@ -1,4 +1,4 @@
 <?php
 
-header('Location: resources/views/formularioProducto.php');
+header('Location: /formularioProducto.php');
 exit();
