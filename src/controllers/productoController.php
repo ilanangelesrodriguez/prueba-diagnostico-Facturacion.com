@@ -1,37 +1,26 @@
 <?php
 
+require_once '../infrastructure/db/conexion.php';
 require_once '../models/producto.php';
-require_once '../infrastructure/repositories/postgresProductoRepo.php';
-require_once '../application/registrarProducto.php';
+require_once '../repositories/postgresProductoRepo.php';
 
-if ($_SERVER['REQUEST_METHOD'] === 'POST') {
-    $codigo = $_POST['codigo'] ?? null;
-    $nombre = $_POST['nombre'] ?? null;
-    $bodega = $_POST['bodega'] ?? null;
-    $sucursal = $_POST['sucursal'] ?? null;
-    $moneda = $_POST['moneda'] ?? null;
-    $precio = $_POST['precio'] ?? null;
-    $materiales = isset($_POST['materiales']) && is_array($_POST['materiales']) ? implode(',', $_POST['materiales']) : null;
-    $descripcion = $_POST['descripcion'] ?? null;
+$conexion = Conexion::conectar();
+$repositorio = new PostgresProductoRepo();
 
-    $producto = new Producto(
-        $codigo,
-        $nombre,
-        $bodega,
-        $sucursal,
-        $moneda,
-        $precio,
-        $materiales,
-        $descripcion
-    );
+try {
+    $codigo = $_POST['codigo'];
+    $nombre = $_POST['nombre'];
+    $precio = $_POST['precio'];
+    $descripcion = $_POST['descripcion'];
+    $id_bodega = $_POST['bodega'];
+    $id_sucursal = $_POST['sucursal'];
+    $id_moneda = $_POST['moneda'];
+    $materiales = isset($_POST['materiales']) ? $_POST['materiales'] : [];
 
-    try {
-        $repositorio = new PostgresProductoRepo();
-        $registrarProducto = new RegistrarProducto($repositorio);
-        $registrarProducto->ejecutar($producto);
+    $producto = new Producto($codigo, $nombre, $precio, $descripcion, $id_bodega, $id_sucursal, $id_moneda, $materiales);
+    $repositorio->guardar($producto);
 
-        echo json_encode(['mensaje' => 'Producto registrado exitosamente']);
-    } catch (Exception $e) {
-        echo json_encode(['error' => $e->getMessage()]);
-    }
+    echo json_encode(['success' => true]);
+} catch (Exception $e) {
+    echo json_encode(['success' => false, 'message' => $e->getMessage()]);
 }
