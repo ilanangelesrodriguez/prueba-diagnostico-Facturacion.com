@@ -2,7 +2,7 @@
 
 require_once '../infrastructure/db/conexion.php';
 require_once '../models/producto.php';
-require_once '../repositories/postgresProductoRepo.php';
+require_once '../infrastructure/repositories/postgresProductoRepo.php';
 
 $conexion = Conexion::conectar();
 $repositorio = new PostgresProductoRepo();

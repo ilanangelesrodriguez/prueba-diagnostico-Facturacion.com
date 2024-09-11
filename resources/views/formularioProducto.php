@@ -209,6 +209,7 @@
         fetch(`../../src/controllers/verificarCodigoProducto.php?codigo=${codigo}`)
             .then(response => response.json())
             .then(data => {
+                
                 if (!data.unico) {
                     alert("El código del producto ya está registrado.");
                     return;
@@ -223,6 +224,7 @@
                 })
                 .then(response => response.json())
                 .then(data => {
+                    
                     if (data.success) {
                         alert('Producto guardado exitosamente');
                         this.reset(); // Limpiar los campos del formulario
